@@ -3,7 +3,7 @@ Deja de versionar tus proyectos usando tu propio sistema de control de versiones
 ********************
 ***Primeros pasos***
 ********************
-    git int => Iniciar Git
+    git int => Iniciar Git.
     rm -rf .git => Eliminar git de un repo.
 **********************************
 *******Configuración de Git*******
@@ -16,9 +16,11 @@ git config --global
 git config --global user.name "SC"
 git config --global user.email "jesuscastellanospaez@hotmail.com"
 git config --global -e => Ver configuración actual.
-**********************************
-*******Configuración de Git*******
-**********************************
+***************
+***Git States**
+***************
+***Working Directory***
+***Staging Area***
 
 ********************************************
 ******Agragar a la zona de preparación******
@@ -189,25 +191,25 @@ git remote set-url origin git@github.com:gsuscastellanosSC/hyperblog.git (cambia
 **************Seguridad**************
 *************************************
 
-**********************************
-***************TAGS***************
-**********************************
+***Tags**
 
-git log --all(Muesta toda la historia)
-git log --all --graph (Muestra toda la historia con la ineracción de las ramas)
-git log --all --graph --decorate --oneline
-alias arbolito="git log --all --graph --decorate --oneline"(forma de alias en linux)
+	git log --all(Muesta toda la historia)
+	git log --all --graph (Muestra toda la historia con la ineracción de las ramas)
+	git log --all --graph --decorate --oneline
+	alias arbolito="git log --all --graph --decorate --oneline"(forma de alias en linux)
 
-git tag -a v0.1 -m "apendiendo tags en git" (hash del commit) (crear un tag)
-git show-ref --tags
+	git tag -a v0.1 -m "apendiendo tags en git" (hash del commit) (crear un tag)
+	git show-ref --tags
 
-git push origin --tags (enviar los tags al repositorio remoto)
-git tag -d v0.1   && $ git push origin :refs/tags/v0.1 (Borrar tags)
+	git push origin --tags (enviar los tags al repositorio remoto)
+	git tag -d v0.1   && $ git push origin :refs/tags/v0.1 (Borrar tags)
 
-
-**********************************
-***************TAGS***************
-**********************************
+***Actualizar tags***
+	git tag new old
+	git tag -d old
+	git push origin :refs/tags/old
+	git push --tags
+	git pull --prune --tags
 
 ************************
 ********ramas***********
