@@ -179,7 +179,7 @@ git push (origin) (master) (Sube Cambios)
 **************Seguridad**************
 *************************************
 
-ssh-keygen -t rsa -b 4096 -C "jesuscastellanospaez@gmail.com" (crea la llave publica y privada)
+ssh-keygen -t rsa -b 4096 -C "sc" (crea la llave publica y privada)
 eval $(ssh-agent -s) (saber si el agente ssh esta ejecuntando)
 ssh-add ~/.ssh/id_rsa (agregar la llave privada)
 eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa
