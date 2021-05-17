@@ -80,6 +80,7 @@
 	ssh-add ~/.ssh/id_rsa (agregar la llave privada)
 	eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa
 	git remote set-url origin git@github.com:gsuscastellanosSC/hyperblog.git (cambiar url para que sea con ssh)
+	ssh-keygen -f remote-key
 
 # Tags
 	git log --all(Muesta toda la historia)
