@@ -167,6 +167,15 @@
 	git branch -r
 	git branch -a
 
+# Borrar todos los tags del repositorio remoto
+    _/ git tag | xargs -I {} git push origin --delete {}
+    _/ git tag --sort=-creatordate | head -n 3 | xargs -I {} git push origin --delete {}
+    _/ git push origin --delete
+# Borrar todos los tags de tu máquina local
+    x git tag | xargs git tag -dx
+# (Opcional) Sincronizar si quedan residuos
+    x git fetch --prune --prune-tags originx
+
 # Links
 	git - la guía sencilla:
 		https://rogerdudler.github.io/git-guide/index.es.html
